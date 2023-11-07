@@ -6,28 +6,9 @@
   </div>
 
   <div class="input-container">
-    <ul>
-      <li>
-        <label>length</label>
-        <input type="range">
-      </li>
-      <li>
-        <label>lowerCase</label>
-        <input type="checkbox">
-      </li>
-      <li>
-        <label>upperCase</label>
-        <input type="checkbox">
-      </li>
-      <li>
-        <label>number</label>
-        <input type="checkbox">
-      </li>
-      <li>
-        <label>symbols</label>
-        <input type="checkbox">
-      </li>
-    </ul>
+      <label>LENGTH</label>
+      <input type="range" min="4" max="30" [(ngModel)]="length">
+      <p>{{ length }}</p>
   </div>
   <button>GENERATE</button>
 </main>

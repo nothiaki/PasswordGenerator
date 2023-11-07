@@ -21,16 +21,14 @@ main .output-container input:focus {
     background-color: var(--hover-color);
 }
 
-main .input-container ul {
-    list-style-type: none;
+main .input-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-main .input-container ul li {
-    padding: 6px;
-}
-
-main .input-container input[type='checkbox']:checked {
-    background-color: transparent;
+main .input-container label {
+    font-weight: 600;
 }
 
 main button {

@@ -8,15 +8,14 @@ import { password } from '../interfaces/password';
 })
 export class GeneratePasswordService {
 
-  url: string = 'https://api.api-ninjas.com/v1/passwordgenerator?length=12';
+  url: string = 'https://api.api-ninjas.com/v1/passwordgenerator?length=';
   headers: HttpHeaders = new HttpHeaders({
     'X-Api-Key': 'EST4yYPppJBoVwIiCJvOm5RthG5IPH0P1mNuoY8d'
   });
 
   constructor(private http: HttpClient) { }
 
-  getPassword(): Observable<password> {
-    console.log({ headers: this.headers });
-    return this.http.get<password>(this.url, { headers: this.headers });
+  getPassword(length: number): Observable<password> {
+    return this.http.get<password>(this.url + length, { headers: this.headers });
   }
 }

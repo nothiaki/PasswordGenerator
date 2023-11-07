@@ -15,6 +15,6 @@ export class AppComponent {
   constructor (private generatePasswordService: GeneratePasswordService) {}
 
   generatePass(): void {
-    this.generatePasswordService.getPassword().subscribe(data => this.password = data.random_password);
+    this.generatePasswordService.getPassword(this.length).subscribe(data => this.password = data.random_password);
   }
 }

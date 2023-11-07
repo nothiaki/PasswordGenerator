@@ -2,7 +2,7 @@
   <h1>PASSWORD GENERATOR</h1>
 
   <div class="output-container">
-    <input type="text">
+    <input type="text" [value]="password">
   </div>
 
   <div class="input-container">
@@ -10,5 +10,5 @@
       <input type="range" min="4" max="30" [(ngModel)]="length">
       <p>{{ length }}</p>
   </div>
-  <button>GENERATE</button>
+  <button (click)="generatePass()">GENERATE</button>
 </main>

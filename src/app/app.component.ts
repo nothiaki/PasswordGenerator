@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { password } from './interfaces/password';
+import { GeneratePasswordService } from './services/generate-password.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   length: number = 12;
+  password: string = '';
+
+  constructor (private generatePasswordService: GeneratePasswordService) {}
+
+  generatePass(): void {
+    this.generatePasswordService.getPassword().subscribe(data => this.password = data.random_password);
+  }
 }

@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgIconsModule, provideNgIconsConfig } from '@ng-icons/core';
 import { ionCopy } from 'node_modules/@ng-icons/ionicons'
+import { ClipboardModule } from '@angular/cdk/clipboard';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ionCopy } from 'node_modules/@ng-icons/ionicons'
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgIconsModule.withIcons({ ionCopy })
+    NgIconsModule.withIcons({ ionCopy }),
+    ClipboardModule
   ],
   providers: [
     provideNgIconsConfig({

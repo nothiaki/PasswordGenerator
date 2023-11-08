@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
-import { password } from './interfaces/password';
 import { GeneratePasswordService } from './services/generate-password.service';
 
 @Component({

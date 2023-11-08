@@ -3,7 +3,7 @@
 
   <div class="output-container">
     <input type="text" [value]="password">
-    <ng-icon name="ionCopy"></ng-icon>
+    <ng-icon name="ionCopy" [cdkCopyToClipboard]="password"></ng-icon>
   </div>
 
   <div class="input-container">

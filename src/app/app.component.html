@@ -3,12 +3,13 @@
 
   <div class="output-container">
     <input type="text" [value]="password">
+    <ng-icon name="ionCopy"></ng-icon>
   </div>
 
   <div class="input-container">
       <label>LENGTH</label>
       <input type="range" min="4" max="30" [(ngModel)]="length">
-      <p>{{ length }}</p>
+      <p>{{ length }} CHARACTERS</p>
   </div>
   <button (click)="generatePass()">GENERATE</button>
 </main>

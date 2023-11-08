@@ -4,7 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { NgIconsModule, provideNgIconsConfig } from '@ng-icons/core';
+import { ionCopy } from 'node_modules/@ng-icons/ionicons'
 
 @NgModule({
   declarations: [
@@ -14,9 +16,14 @@ import { HttpClientModule } from '@angular/common/http'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgIconsModule.withIcons({ ionCopy })
   ],
-  providers: [],
+  providers: [
+    provideNgIconsConfig({
+      size: '24px'
+    })
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,12 +4,15 @@ main {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    background-color: var(--fore-color);
+}
+
+main .output-container {
+    position: relative;
 }
 
 main .output-container input {
     width: 100%;
-    background-color: var(--bg-color);
+    background-color: var(--fore-color);
     padding: 12px 0px;
     border: none;
     border-radius: 6px;
@@ -21,9 +24,19 @@ main .output-container input:focus {
     background-color: var(--hover-color);
 }
 
+main .output-container ng-icon {
+    padding: 4px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
 main .input-container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     gap: 12px;
 }
 
@@ -36,7 +49,7 @@ main button {
     border-radius: 6px;
     border: none;
     font-weight: 500;
-    background-color: var(--bg-color);
+    background-color: var(--fore-color);
     cursor: pointer;
     transition: ease-in-out 0.2s;
 }

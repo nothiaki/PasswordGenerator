@@ -8,7 +8,7 @@ import { password } from '../interfaces/password';
 })
 export class GeneratePasswordService {
 
-  url: string = 'https://random-password-api.vercel.app/';
+  url: string = 'https://random-password-generator-random-string.onrender.com/';
 
   constructor(private http: HttpClient) { }
 
